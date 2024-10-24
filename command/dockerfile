@@ -1,0 +1,5 @@
+FROM alpine:3
+
+RUN mkdir hello
+RUN echo "HELLO WORLD" > "hello/Hello-World.txt"
+CMD cat "hello/Hello-World.txt"

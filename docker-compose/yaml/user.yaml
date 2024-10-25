@@ -1,0 +1,15 @@
+firstname: "Abdul Muiz"
+lastname: "Arrizqi"
+hobby:
+  - mancing
+  - lari
+  - olahraga
+address:
+  street: JL. Bhayangkara
+  city: Samarinda
+  kecamatan: Sungai Kunjang
+wallet:
+  - type: bank jago
+    amount: 100000
+  - type: bca
+    amount: 5000

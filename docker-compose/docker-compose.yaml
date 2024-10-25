@@ -1,0 +1,29 @@
+volumes:
+  volume1:
+    name: volume1
+
+services:
+  nginx-example:
+    container_name: nginx-example
+    image: nginx:latest
+    ports:
+      - protocol: tcp
+        published: 8080
+        target: 80
+  conmysql:
+    container_name: conmysql
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: tes
+    volumes:
+      - "volume1:/var/lib/mysql"
+  conadmin:
+    container_name: conadmin
+    image: phpmyadmin:latest
+    ports:
+      - "8085:80"
+    depends_on:
+      - conmysql
+    environment:
+      PMA_HOST: conmysql
+      PMA_PORT: 3306
